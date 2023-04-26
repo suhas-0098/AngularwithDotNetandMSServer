@@ -1,0 +1,48 @@
+
+
+
+<form (ngSubmit)="submitForm()" style=" padding: 30px;">
+    <div>
+        <label for="firstName">First Name:</label>
+            <input  style="margin: 10px;"type="text" id="firstName" name="firstName"  [(ngModel)]="firstname">
+            <br>
+
+        <label for="lastName">Last Name:</label>
+            <input style="margin: 10px;"  type="text" id="lastName" name="lastName" [(ngModel)]="lastname">
+
+            <br>
+
+        <label for="mobileNumber">Mobile Number:</label>
+            <input  style="margin: 10px;" type="text" id="mobileNumber" name="mobileNumber" [(ngModel)]="mobilenumber">
+
+            <br>
+
+        <label for="address_">Address:</label>
+            <input  style="margin: 10px;" type="text" id="address_" name="address_" [(ngModel)]="address">
+
+            <br>
+
+
+        <label for="email">Email:</label>
+            <input  style="margin: 10px;" type="text" id="email" name="email" [(ngModel)]="email">
+
+            <br>
+    </div>
+
+    <div>
+        <label style="margin: 10px;" for="gender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="male" [(ngModel)]="gender"> Male
+        <input type="radio" id="female" name="gender" value="female" [(ngModel)]="gender"> Female
+    </div>
+ <br>
+    <div>
+        <label  style="margin: 10px;" for="depart">Department:</label>
+        <select id="depart" name="depart" [(ngModel)]="dept">
+            <option value="">-- Select a department --</option>
+            <option *ngFor="let d of department" value="{{d.deptID}}">{{d.deptName}}</option>
+                 </select>
+    </div>
+    <br>
+
+<button  style="margin:20px;"  type="submit">Submit</button>
+</form>
